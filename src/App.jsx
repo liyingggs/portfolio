@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Index from './components/index';
 import About from './components/About';
@@ -11,9 +11,21 @@ import Footer from './components/Footer';
 import './styles/App.css';
 
 function App() {
+  // store theme in localStorage so it survives reloads
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark-mode', darkMode);
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Index />
       <About />
       <Skills />

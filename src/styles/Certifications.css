@@ -1,5 +1,5 @@
 .certifications {
-  background: white;
+  background: var(--primary-color);
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -10,7 +10,7 @@
 }
 
 .cert-card {
-  background: var(--secondary-color);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
   border: 2px solid var(--border-color);

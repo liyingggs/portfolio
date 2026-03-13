@@ -17,7 +17,7 @@
 }
 
 .about-highlight {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
   border-left: 5px solid var(--accent-color);

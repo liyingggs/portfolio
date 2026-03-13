@@ -6,13 +6,45 @@
 
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #f8f9fa;
+  --secondary-color: #ffffff;
   --accent-color: #000000;
   --text-color: #000000;
   --text-secondary: #555555;
   --border-color: #dddddd;
   --success-color: #28a745;
   --hover-color: #f0f0f0;
+  --card-bg: #ffffff;
+}
+
+/* dark mode overrides */
+.dark-mode {
+  /* softer dark backgrounds for better readability */
+  --primary-color: #181818;
+  --secondary-color: #232323;
+  --accent-color: #64b5f6;
+  --text-color: #f0f0f0;
+  --text-secondary: #c0c0c0;
+  --border-color: #404040;
+  --hover-color: #333333;
+  --card-bg: #232323;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  padding: 0 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
 }
 
 html {

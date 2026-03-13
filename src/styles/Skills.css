@@ -1,5 +1,5 @@
 .skills {
-  background: white;
+  background: var(--primary-color);
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -10,7 +10,7 @@
 }
 
 .skill-category {
-  background: var(--secondary-color);
+  background: var(--card-bg);
   padding: 1.2rem;
   border-radius: 10px;
   border: 2px solid var(--border-color);
@@ -39,7 +39,7 @@
 
 .skill-badge {
   display: inline-block;
-  background: white;
+  background: var(--card-bg);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 0.6rem 1.1rem;

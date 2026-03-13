@@ -1,5 +1,5 @@
 .projects {
-  background: var(--secondary-color);
+  background: var(--primary-color); /* full-screen area matches page background */
   border-bottom: 2px solid var(--border-color);
 }
 
@@ -11,7 +11,8 @@
 }
 
 .project-card {
-  background: white;
+  background: var(--card-bg);
+  color: var(--text-color);
   padding: 2rem;
   border-radius: 10px;
   border: 2px solid var(--border-color);
@@ -43,7 +44,7 @@
 }
 
 .project-type {
-  background: var(--secondary-color);
+  background: var(--card-bg);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 0.4rem 0.8rem;
@@ -68,7 +69,7 @@
 
 .tech-tag {
   display: inline-block;
-  background: white;
+  background: var(--card-bg);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 0.4rem 0.8rem;

@@ -5,8 +5,8 @@ const Experience = () => {
   const experiences = [
     {
       title: 'Diploma in Enterprise Cloud Computing & Management',
-      organization: 'Technology Institute',
-      duration: 'Currently Pursuing',
+      organization: 'Republic Polytechnic',
+      duration: 'Graduation in 2026',
       highlights: [
         'Comprehensive training in cloud architecture and enterprise solutions',
         'Hands-on experience with Python, JavaScript, and cloud technologies',
@@ -16,26 +16,14 @@ const Experience = () => {
     },
     {
       title: 'Technical Training & Projects',
-      organization: 'Self-Directed Learning',
+      organization: 'Self Development',
       duration: 'Ongoing',
       highlights: [
-        'Developed multiple full-stack web applications',
-        'Built cloud-native solutions using AWS services',
-        'Implemented CI/CD pipelines and containerization',
-        'Participated in agile development methodologies'
+        'Developed multiple full-stack web applications using Node.js, Express.js, and React during school years',
+        'Built cloud-native solutions using AWS services, such as an attempt of a backup cloud server with FSx',
+        'Participated in agile methodologies in group projects, including a football club management system',
       ]
     },
-    {
-      title: 'Open Source & Collaborative Development',
-      organization: 'Professional Community',
-      duration: 'Active',
-      highlights: [
-        'Version control and collaborative development using Git',
-        'Open to internship and freelance opportunities',
-        'Passionate about learning and contributing to technology',
-        'Strong problem-solving and communication skills'
-      ]
-    }
   ];
 
   return (

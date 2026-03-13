@@ -2,7 +2,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  /* use variable so dark mode can override */
+  background: var(--primary-color);
   border-bottom: 2px solid var(--border-color);
   z-index: 1000;
   padding: 0.5rem 0;
@@ -14,7 +15,7 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* adjust for toggle button */
   align-items: center;
   position: relative;
   width: 100%;
@@ -24,12 +25,14 @@
   display: flex;
   list-style: none;
   gap: 2rem;
+  justify-content: center; /* ensure items are evenly centered */
+  background-color: var(--primary-color);
 }
 
 .nav-item button {
   background: none;
   border: none;
-  color: var(--text-secondary);
+  color: var(--text-color); /* use main text color so it changes with theme */
   font-size: 1.25rem;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -59,6 +62,29 @@
   height: 2px;
   background: var(--accent-color);
   transition: all 0.3s ease;
+}
+
+.theme-toggle {
+  font-size: 1.4rem;
+  background: var(--hover-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

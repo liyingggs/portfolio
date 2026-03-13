@@ -9,7 +9,7 @@ const Skills = () => {
     },
     {
       title: 'Backend & Frameworks',
-      skills: ['Node.js', 'Express.js', 'REST APIs', 'Database Management', 'Server-Side Development', 'Full-Stack Development']
+      skills: ['Node.js', 'Express.js', 'REST APIs', 'Database Management', 'Server-Side Development', 'Full-Stack Development','CRUD Operations','Authentication & Authorization']
     },
     {
       title: 'Frontend',
@@ -17,19 +17,19 @@ const Skills = () => {
     },
     {
       title: 'Cloud & Infrastructure',
-      skills: ['AWS', 'Cisco Networking', 'Linux Server Management', 'Cloud Architecture', 'Virtualization', 'Containerization', 'Cloud Security']
+      skills: ['AWS', 'Cisco Networking', 'Cloud Architecture', 'Virtualization', 'Containerization', 'Cloud Security']
     },
     {
       title: 'Tools & Platforms',
-      skills: ['GitHub', 'Opera Cloud PMS', 'VSCode', 'Postman', 'CI/CD Pipelines']
+      skills: ['GitHub', 'Opera Cloud PMS', 'VSCode', 'Postman', 'CI/CD Pipelines','Ubuntu','Windows Powershell','Nmap','Vmware']
     },
     {
         title: 'Soft Skills',
-        skills: ['Problem-Solving', 'Teamwork', 'Communication', 'Adaptability', 'Time Management', 'Critical Thinking', 'Collaboration', 'Leadership']
+        skills: ['Problem-Solving', 'Teamwork', 'Communication', 'Adaptability', 'Time Management', 'Critical Thinking', 'Leadership']
     },
     {
         title: 'Skills & Methodologies:',
-        skills: ['Agile Development','Software Development Life Cycle (SDLC)' ,'Scrum', 'Test-Driven Development', 'CI/CD', 'Version Control (Git)', 'Code Review', 'Debugging & Troubleshooting', 'Documentation','IT Support & Operations', 'Project Management']
+        skills: ['Agile','Software Development Life Cycle (SDLC)' ,'Scrum', 'User Acceptance Test', 'CI/CD', 'Version Control (Git)', 'Code Review', 'Debug & Troubleshoot', 'Documentation','IT Support & Operations', 'Project Management']
     }
   ];
 

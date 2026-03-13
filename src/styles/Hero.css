@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: var(--primary-color); /* use theme variable instead of hard-coded white */
   border-bottom: 2px solid var(--border-color);
   margin-top: 60px;
   padding-top: 2rem;

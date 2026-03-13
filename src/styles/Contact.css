@@ -15,7 +15,7 @@
   text-align: center;
   margin-bottom: 3rem;
   padding: 2rem;
-  background: white;
+  background: var(--card-bg);
   border-radius: 10px;
   border: 2px solid var(--border-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@
   align-items: center;
   flex-direction: column;
   padding: 2rem;
-  background: white;
+  background: var(--card-bg);
   border-radius: 10px;
   border: 2px solid var(--border-color);
   transition: all 0.3s ease;
@@ -101,6 +101,44 @@
 .contact-item a:hover {
   color: var(--text-secondary);
   text-decoration: underline;
+}
+
+/* Icon button for contact links */
+.contact-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--hover-color);
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.contact-icon-btn:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+.contact-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.contact-heading-icons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 @media (max-width: 768px) {

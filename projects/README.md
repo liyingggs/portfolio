@@ -19,11 +19,9 @@ This section showcases my academic work and practical applications of the skills
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 If you have feedback, suggestions, or would like to collaborate on any of these projects, feel free to reach out!
-
-**Contact:** [liyingggs@gmail.com](mailto:liyingggs@gmail.com)
 
 ---
 
