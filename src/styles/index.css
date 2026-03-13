@@ -82,11 +82,23 @@ html {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--primary-color);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.08rem;
   color: var(--text-color);
-  line-height: 1.6;
+  background: var(--primary-color);
+  line-height: 1.7;
 }
 
 .App {
@@ -94,23 +106,25 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.7em;
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-  color: var(--accent-color);
-  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
 h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 p {
@@ -133,4 +147,161 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+/* 1. Global container for all sections */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 2. Typography: font, headings, and color */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.08rem;
+  color: var(--text-color);
+  background: var(--primary-color);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.7em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+/* 3. Section spacing and dividers */
+section {
+  padding: 80px 0 60px 0;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* 4. Button & link consistency */
+.btn, .cta-badge, .contact-icon-btn {
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.btn-primary, .cta-badge {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover, .cta-badge:hover {
+  background: var(--primary-color);
+  color: var(--accent-color);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* 5. Card & panel shadow */
+.cert-card, .experience-card, .project-card, .skill-category, .cta-message, .contact-item {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* 6. Responsive improvements */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 10px;
+  }
+  section {
+    padding: 60px 0 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  section {
+    padding: 40px 0 24px 0;
+  }
+}
+
+/* 7. Simple fade-in animation for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
+}
+
+/* 8. Footer enhancement */
+.footer {
+  background: var(--primary-color);
+  border-top: 1.5px solid var(--border-color);
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+}
+
+.footer .container {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.footer-socials a {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-socials a:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
 }
