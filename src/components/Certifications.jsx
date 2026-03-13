@@ -46,11 +46,11 @@ const Certifications = () => {
   return (
     <section id="certifications" className="certifications">
       <div className="container">
-        <h2>Certifications & Achievements</h2>
+        <h2 className="certifications-title"><strong>Certifications & Achievements</strong></h2>
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
             <div key={index} className="cert-card">
-              <h3>{cert.organization}</h3>
+              <h3 className="cert-title"><strong>{cert.organization}</strong></h3>
               <ul className="cert-list">
                 {cert.certs.map((item, idx) => (
                   <li key={idx}>{item}</li>

@@ -15,11 +15,22 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* adjust for toggle button */
   align-items: center;
   position: relative;
   width: 100%;
 }
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
 
 .nav-menu {
   display: flex;

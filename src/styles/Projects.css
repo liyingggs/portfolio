@@ -1,3 +1,6 @@
+.projects-title {
+  text-align: center;
+}
 .projects {
   background: var(--primary-color); /* full-screen area matches page background */
   border-bottom: 2px solid var(--border-color);

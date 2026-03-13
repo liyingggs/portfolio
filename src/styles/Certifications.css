@@ -1,3 +1,6 @@
+.certifications-title {
+  text-align: center;
+}
 .certifications {
   background: var(--primary-color);
   border-bottom: 2px solid var(--border-color);
@@ -5,17 +8,20 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .cert-card {
   background: var(--card-bg);
-  padding: 2rem;
+  padding: 1rem 1.2rem;
   border-radius: 10px;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  max-width: 100%;
 }
 
 .cert-card:hover {
@@ -26,9 +32,13 @@
 
 .cert-card h3 {
   color: var(--accent-color);
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
+  text-align: center;
+}
+.cert-title {
+  text-align: center;
 }
 
 .cert-list {
@@ -36,8 +46,9 @@
 }
 
 .cert-list li {
-  padding: 0.8rem 0;
+  padding: 0.4rem 0;
   color: var(--text-secondary);
+  font-size: 0.92rem;
   padding-left: 1.5rem;
   position: relative;
   line-height: 1.6;
