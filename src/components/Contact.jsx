@@ -29,7 +29,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <p className="contact-subtitle">I'm actively looking for opportunities to grow as a software engineer, and connect with like-minded individuals. Feel free to reach out! </p>
+        <p className="contact-subtitle">I'm actively looking for opportunities to grow, and connect with like-minded individuals. Feel free to reach out! </p>
         <div className="cta-message">
           <p>I'm open to:</p>
           <div className="cta-items">
