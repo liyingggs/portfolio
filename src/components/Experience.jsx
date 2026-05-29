@@ -4,7 +4,7 @@ import '../styles/Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Diploma in Enterprise Cloud Computing & Management',
+      title: 'Diploma in Information Technology',
       organization: 'Republic Polytechnic',
       duration: 'Graduation in 2026',
       highlights: [
