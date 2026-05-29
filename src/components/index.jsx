@@ -9,7 +9,7 @@ const Index = () => {
         <h1>Hello! I'm <span>Ong Li Ying</span></h1>
         <p className="hero-subtitle"> Aspiring Full Stack Developer | Cloud Enthusiast | Tech Student</p>
         <p className="hero-description">
-          Diploma in Enterprise Cloud Computing & Management with expertise in Software Development, and Cloud Technologies
+          Diploma in Information Technology with expertise in Software Development, and Cloud Technologies
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">View My Work</a>
