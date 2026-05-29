@@ -18,7 +18,7 @@ const Certifications = () => {
         'Switching, Routing, and Wireless Essentials',
         'Enterprise Networking, Security, and Automation',
         'Managing Cisco Network Operating Systems',
-        'C++ Essentials 1'
+        'C++ Essentials 1 & 2'
       ]
     },
     {
