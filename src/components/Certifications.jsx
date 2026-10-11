@@ -5,63 +5,105 @@ import '../styles/Certifications.css';
 const Certifications = () => {
   const certifications = [
     {
-      organization: 'AWS (Amazon Web Services)',
+      number: '01',
+      organization: 'Amazon Web Services',
+      abbreviation: 'AWS',
       certs: [
         'AWS Cloud Practitioner Essentials',
         'AWS Knowledge: Cloud Essentials',
-        'AWS Certified Cloud Practitioner (CLF-C01)'
-      ]
+        'AWS Certified Cloud Practitioner (CLF-C01)',
+      ],
     },
     {
-      organization: 'Cisco Net Academy',
+      number: '02',
+      organization: 'Cisco Networking Academy',
+      abbreviation: 'CISCO',
       certs: [
         'Switching, Routing, and Wireless Essentials',
         'Enterprise Networking, Security, and Automation',
         'Managing Cisco Network Operating Systems',
-        'C++ Essentials 1 & 2'
-      ]
+        'C++ Essentials 1 & 2',
+      ],
     },
     {
-      organization: 'Singapore Computing Society',
+      number: '03',
+      organization: 'Singapore Computer Society',
+      abbreviation: 'SCS',
       certs: [
-        'SCS-Huawei (ICT Academy) Essential Skills Programme',
-        'SCS-Google Career Certificates Programme'
-      ]
+        'SCS-Huawei ICT Academy Essential Skills Programme',
+        'SCS-Google Career Certificates Programme',
+      ],
     },
     {
+      number: '04',
       organization: 'LinkedIn Learning',
+      abbreviation: 'LINKEDIN',
       certs: [
         'Hands-on Introduction: React',
         'Learning Node.js',
-        'Building a website with Node.js and Express.js',
-        'AWS Certified Cloud Practitioner (CLF-C01) Cert Prep'
-      ]
+        'Building a Website with Node.js and Express.js',
+        'AWS Certified Cloud Practitioner (CLF-C01) Cert Prep',
+      ],
     },
     {
+      number: '05',
       organization: 'IBM',
-      certs: ['Project Management Fundamentals']
-    }
+      abbreviation: 'IBM',
+      certs: ['Project Management Fundamentals'],
+    },
   ];
 
   return (
     <section id="certifications" className="certifications">
       <div className="container">
-        <h2 className="certifications-title"><strong>Certifications & Achievements</strong></h2>
+        <div className="certifications-heading">
+          <p className="certifications-eyebrow">CONTINUOUS LEARNING</p>
+
+          <h2 className="certifications-title">
+            Certifications & <span>Learning.</span>
+          </h2>
+
+          <p className="certifications-intro">
+            Courses and credentials that reflect my ongoing development
+            across cloud computing, networking, software development,
+            and project management.
+          </p>
+        </div>
+
         <div className="certifications-grid">
-          {certifications.map((cert, index) => (
-            <div key={index} className="cert-card">
-              <h3 className="cert-title"><strong>{cert.organization}</strong></h3>
+          {certifications.map((cert) => (
+            <article className="cert-card" key={cert.number}>
+              <div className="cert-card-top">
+                <span className="cert-number">{cert.number}</span>
+                <span className="cert-abbreviation">
+                  {cert.abbreviation}
+                </span>
+              </div>
+
+              <h3 className="cert-title">{cert.organization}</h3>
+
               <ul className="cert-list">
-                {cert.certs.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                {cert.certs.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
+
         <div className="credly-container">
-          <a href="https://www.credly.com/users/li-ying-ong/edit#credly" target="_blank" rel="noopener noreferrer" className="credly-button">
-            <FaExternalLinkAlt /> View on Credly
+          <p className="credly-description">
+            Want to verify my credentials?
+          </p>
+
+          <a
+            href="https://www.credly.com/users/li-ying-ong/edit#credly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="credly-button"
+          >
+            View my Credly profile
+            <FaExternalLinkAlt aria-hidden="true" />
           </a>
         </div>
       </div>

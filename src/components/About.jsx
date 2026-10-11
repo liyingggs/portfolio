@@ -1,29 +1,77 @@
+
 import React from 'react';
 import '../styles/About.css';
 
 const About = () => {
+  const highlights = [
+    {
+      label: 'EDUCATION',
+      title: 'SIM-UOL',
+      description: 'Data Science & Business Analytics',
+      detail: '2026–2029 (Expected)',
+    },
+    {
+      label: 'EXPERIENCE',
+      title: 'Business & IT',
+      description: 'City Developments Limited',
+      detail: 'The Capitol Kempinski Hotel Singapore',
+    },
+    {
+      label: 'INTERESTS',
+      title: 'Data & Technology',
+      description: 'Data Analytics & Business Analysis',
+      detail: 'Python · SQL · Cloud Computing',
+    },
+  ];
+
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 className="about-title"><strong>About Me</strong></h2>
+        <div className="about-heading">
+          <p className="about-eyebrow">GET TO KNOW ME</p>
+          <h2 className="about-title">About <span>Me.</span></h2>
+          <p className="about-intro">
+            Bridging technology, data, and business to solve problems
+            and support smarter decisions.
+          </p>
+        </div>
+
         <div className="about-content">
           <div className="about-text">
             <p>
-              I graduated with a Diploma in Information Technology from Republic Polytechnic, with three years of practical experience and an IT internship at The Capitol Kempinski Hotel Singapore.
+              I'm a first-year SIM-UOL undergraduate pursuing Data Science
+              & Business Analytics, with a Diploma in Information Technology
+              from Republic Polytechnic.
             </p>
+
             <p>
-              I have a strong foundation in Python, Linux, networking, and cloud technologies, along with hands-on experience in enterprise IT operations and Opera Cloud PMS.
+              Through my experience at City Developments Limited and
+              The Capitol Kempinski Hotel Singapore, I've gained exposure
+              to business operations, analysis, and enterprise IT.
             </p>
+
             <p>
-              A motivated team player with a strong willingness to learn, I aim to deepen my knowledge in computer science and software development while contributing to reliable and effective technology solutions.
+              I'm interested in turning data into actionable insights
+              while exploring how technology can improve business processes.
             </p>
-            <p> I am also active in community service by joining People's Association and attending the Meet-the-People sessions as a Junior Writer</p>
-            <div className="about-highlight">
-              <p><strong>Education:</strong> Diploma in Information Technology (Republic Polytechnic)</p>
-              <p><strong>Experience:</strong> 3 years practical experience + IT Internship (The Capitol Kempinski Hotel Singapore)</p>
-              <p><strong>Focus:</strong> Full-stack development, Cloud computing, Enterprise IT, Software Development</p>
-            </div>
           </div>
+        </div>
+
+        <div className="about-highlights">
+          {highlights.map((item, index) => (
+            <div className="about-card" key={item.label}>
+              <div className="about-card-top">
+                <span>{item.label}</span>
+                <span className="about-card-number">
+                  0{index + 1}
+                </span>
+              </div>
+
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span className="about-card-detail">{item.detail}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

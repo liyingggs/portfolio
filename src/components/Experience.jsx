@@ -4,47 +4,94 @@ import '../styles/Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Diploma in Information Technology',
-      organization: 'Republic Polytechnic',
-      duration: 'Graduation in 2026',
+      number: '01',
+      category: 'PROFESSIONAL EXPERIENCE',
+      title: 'Temporary Admin & Business Analyst',
+      organization: 'City Developments Limited (CDL)',
+      duration: '2026',
       highlights: [
-        'Comprehensive training in cloud architecture and enterprise solutions',
-        'Hands-on experience with Python, JavaScript, and cloud technologies',
-        'Focus on modern development practices and DevOps',
-        'Strong foundation in networking and IT infrastructure'
-      ]
+        'Contributed to a tenant collaboration portal prototype for prospective and existing tenants.',
+        'Worked on making fit-out guidelines, manuals, and essential tenancy information easier to access.',
+        'Explored how digital solutions can improve information accessibility and the tenant experience.',
+      ],
     },
     {
-      title: 'Technical Training & Projects',
-      organization: 'Self Development',
-      duration: 'Ongoing',
+      number: '02',
+      category: 'PROFESSIONAL EXPERIENCE',
+      title: 'IT Intern',
+      organization: 'The Capitol Kempinski Hotel Singapore',
+      duration: '20-week internship · 2025–2026',
       highlights: [
-        'Developed multiple full-stack web applications using Node.js, Express.js, and React during school years',
-        'Built cloud-native solutions using AWS services, such as an attempt of a backup cloud server with FSx',
-        'Participated in agile methodologies in group projects, including a football club management system',
-      ]
+        'Supported IT operations through workstation setup, troubleshooting, and user account and access management.',
+        'Gained hands-on exposure to hotel systems, including OPERA Cloud and Infrasys POS.',
+        'Explored an AWS FSx-based file server solution to support shared-drive backup and infrastructure resilience.',
+        'Assisted with technical support requests involving enterprise applications, devices, and infrastructure.',
+      ],
+    },
+    {
+      number: '03',
+      category: 'EDUCATION',
+      title: 'BSc Data Science & Business Analytics',
+      organization: 'SIM – University of London (SIM-UOL)',
+      duration: '2026–2029 · Expected',
+      highlights: [
+        'Developing knowledge in data science, analytics, and quantitative problem-solving.',
+        'Building a foundation for applying analytical methods to business decisions and practical problems.',
+      ],
+    },
+    {
+      number: '04',
+      category: 'EDUCATION',
+      title: 'Diploma in Information Technology',
+      organization: 'Republic Polytechnic',
+      duration: 'Graduated in 2026',
+      highlights: [
+        'Studied cloud computing, enterprise IT solutions, networking, and software development.',
+        'Applied Python, JavaScript, SQL, and web technologies in practical projects.',
+        'Gained exposure to cloud infrastructure, DevOps concepts, and collaborative software development.',
+      ],
     },
   ];
 
   return (
     <section id="experience" className="experience">
       <div className="container">
-        <h2 className="experience-title"><strong>Experience & Training</strong></h2>
-        <p className="experience-intro">My educational journey and professional development</p>
+        <div className="experience-heading">
+          <p className="experience-eyebrow">MY JOURNEY</p>
+
+          <h2 className="experience-title">
+            Experience & <span>Education.</span>
+          </h2>
+
+          <p className="experience-intro">
+            From IT infrastructure and software development to business
+            analytics, my journey combines technical experience with
+            a growing interest in data-driven decision-making.
+          </p>
+        </div>
+
         <div className="experience-timeline">
-          {experiences.map((exp, index) => (
-            <div key={index} className="experience-card">
-              <div className="experience-header">
-                <h3>{exp.title}</h3>
-                <span className="experience-org">{exp.organization}</span>
+          {experiences.map((exp) => (
+            <article className="experience-card" key={exp.number}>
+              <div className="experience-card-top">
+                <span className="experience-number">{exp.number}</span>
+                <span className="experience-category">
+                  {exp.category}
+                </span>
               </div>
-              <div className="experience-duration">{exp.duration}</div>
+
+              <h3 className="experience-role">{exp.title}</h3>
+
+              <p className="experience-org">{exp.organization}</p>
+
+              <p className="experience-duration">{exp.duration}</p>
+
               <ul className="experience-highlights">
-                {exp.highlights.map((highlight, idx) => (
-                  <li key={idx}>{highlight}</li>
+                {exp.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </div>

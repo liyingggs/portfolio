@@ -1,51 +1,94 @@
+
 import React from 'react';
 import '../styles/Skills.css';
 
 const Skills = () => {
-
   const skillCategories = [
     {
-      title: 'Programming & Software Development',
-      skills: ['Python', 'JavaScript', 'C++', 'HTML', 'CSS', 'React', 'Node.js', 'Express.js', 'REST APIs', 'Bootstrap', 'Responsive Design','Linux/Bash/Shell Scripting']
+      title: 'Programming & Web Development',
+      number: '01',
+      skills: [
+        'Python', 'JavaScript', 'C++', 'HTML', 'CSS',
+        'React', 'Node.js', 'Express.js', 'REST APIs',
+        'Bootstrap', 'Responsive Design'
+      ]
+    },
+    {
+      title: 'Data & Databases',
+      number: '02',
+      skills: [
+        'SQL', 'Database Management', 'CRUD Operations',
+        'Authentication & Authorization'
+      ]
     },
     {
       title: 'Cloud & Infrastructure',
-      skills: ['AWS', 'Cisco Networking', 'Cloud Architecture', 'Virtualization', 'Containerization', 'Cloud Security', 'Ubuntu', 'Windows Powershell', 'Nmap', 'Vmware']
+      number: '03',
+      skills: [
+        'AWS', 'Cloud Architecture', 'Cisco Networking',
+        'Virtualization', 'Containerization', 'Cloud Security',
+        'Linux', 'Ubuntu', 'Windows PowerShell',
+        'Bash/Shell Scripting', 'VMware', 'Nmap'
+      ]
     },
     {
-      title: 'Database & DevOps',
-      skills: ['SQL', 'Database Management', 'CI/CD', 'Version Control (Git)', 'Postman', 'Server-Side Development', 'Full-Stack Development', 'CRUD Operations', 'Authentication & Authorization', 'Opera Cloud PMS']
+      title: 'Development Tools & Practices',
+      number: '04',
+      skills: [
+        'Git', 'CI/CD', 'Postman', 'Code Review',
+        'Debugging & Troubleshooting', 'Documentation',
+        'Server-Side Development', 'Full-Stack Development'
+      ]
     },
     {
-      title: 'Technical Practices',
-      skills: ['User Acceptance Test', 'Code Review', 'Debug & Troubleshoot', 'Documentation', 'IT Support & Operations']
+      title: 'Enterprise IT & Methodologies',
+      number: '05',
+      skills: [
+        'Opera Cloud PMS', 'IT Support & Operations',
+        'User Acceptance Testing', 'Agile', 'SDLC',
+        'Scrum', 'Project Management'
+      ]
     },
     {
-      title: 'Methodologies',
-      skills: ['Agile', 'SDLC', 'Scrum', 'Project Management']
-    },
-    {
-      title: 'Soft Skills',
-      skills: ['Problem-Solving', 'Teamwork', 'Communication', 'Adaptability', 'Time Management', 'Critical Thinking', 'Leadership']
+      title: 'Professional Skills',
+      number: '06',
+      skills: [
+        'Problem-Solving', 'Critical Thinking',
+        'Communication', 'Teamwork', 'Adaptability',
+        'Time Management', 'Leadership'
+      ]
     }
   ];
+
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2 className="skills-title"><strong>Technical Skills</strong></h2>
-        <div className="skills-grid two-col">
-          {Array.from({ length: Math.ceil(skillCategories.length / 2) }).map((_, rowIdx) => (
-            <div className="skills-row" key={rowIdx}>
-              {skillCategories.slice(rowIdx * 2, rowIdx * 2 + 2).map((category, colIdx) => (
-                <div key={colIdx} className="skill-category">
-                  <h3>{category.title}</h3>
-                  <div className="skill-list">
-                    {category.skills.map((skill, idx) => (
-                      <span key={idx} className="skill-badge">{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+        <div className="skills-heading">
+          <p className="skills-eyebrow">WHAT I BRING</p>
+          <h2 className="skills-title">
+            Skills & <span>Expertise.</span>
+          </h2>
+          <p className="skills-intro">
+            A growing toolkit across software development, cloud
+            infrastructure, data, and business technology.
+          </p>
+        </div>
+
+        <div className="skills-grid">
+          {skillCategories.map((category) => (
+            <div className="skill-category" key={category.number}>
+              <div className="skill-card-top">
+                <h3>{category.title}</h3>
+                <span>{category.number}</span>
+              </div>
+
+              <div className="skill-list">
+                {category.skills.map((skill) => (
+                  <span className="skill-badge" key={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

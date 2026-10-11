@@ -5,51 +5,124 @@ import '../styles/Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'AWS FSx File Server Solution for The Capitol Kempinski Hotel Singapore',
-      description: 'Designed an AWS FSx file server to back up the hotel’s domain controller and shared drives during my IT internship at The Capitol Kempinski Hotel Singapore; partially implemented due to time and cross-region corporate coordination.',
-      technologies: ['AWS S3', 'EC2', 'Active Directory','Python','VPN','VPC','Security Groups'],
-      type: 'IT Internship Project',
+      number: '01',
+      title: 'AWS FSx File Server Solution',
+      subtitle: 'The Capitol Kempinski Hotel Singapore',
+      description:
+        'Explored an AWS-based file server solution to support shared-drive backup and improve infrastructure resilience during my IT internship. The project involved cloud architecture planning and partial implementation, with progress constrained by cross-region coordination and project timelines.',
+      technologies: [
+        'AWS FSx',
+        'Amazon EC2',
+        'Amazon S3',
+        'Active Directory',
+        'VPC',
+        'VPN',
+        'Security Groups',
+      ],
+      type: 'IT Internship',
     },
     {
+      number: '02',
       title: 'Football Club Management Web App',
-      description: 'Comprehensive full-stack web application for managing football club operations including account management, store, payments, admin controls, events, schedules, and news management.',
-      technologies: ['Node.js', 'Express.js', 'JavaScript', 'CSS', 'SQL','XAMPP'],
+      subtitle: 'Full-Stack Web Development',
+      description:
+        'Built a full-stack web application for managing football club operations, bringing together user accounts, merchandise, payment workflows, membership benefits, events, match schedules, and administrative controls.',
+      technologies: [
+        'Node.js',
+        'Express.js',
+        'JavaScript',
+        'SQL',
+        'EJS',
+        'CSS',
+        'XAMPP',
+      ],
       type: 'Final Year Project',
-      github: 'https://github.com/liying23025305/FYP---Football-Club-Management'
-    }
+      github:
+        'https://github.com/liying23025305/FYP---Football-Club-Management',
+    },
+    {
+      number: '03',
+      title: 'Tenant Collaboration Portal',
+      subtitle: 'City Developments Limited',
+      description:
+        'Worked on a portal prototype to help prospective and existing tenants access fit-out guidelines, manuals, and essential tenancy information. The project focused on making important resources easier to find and improving the tenant information experience.',
+      technologies: ['Node.js', 'JavaScript', 'CSS'],
+      type: 'Business & IT',
+    },
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="projects-title"><strong>Featured Projects</strong></h2>
+        <div className="projects-heading">
+          <p className="projects-eyebrow">SELECTED WORK</p>
+
+          <h2 className="projects-title">
+            Projects & <span>Experience.</span>
+          </h2>
+
+          <p className="projects-intro">
+            A selection of projects where I explore software development,
+            cloud infrastructure, and practical business technology.
+          </p>
+        </div>
+
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-header">
-                <h3>{project.title}</h3>
+          {projects.map((project) => (
+            <article className="project-card" key={project.number}>
+              <div className="project-card-top">
+                <span className="project-number">{project.number}</span>
                 <span className="project-type">{project.type}</span>
               </div>
-              <p className="project-description">{project.description}</p>
-              <div className="project-tech">
-                {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="tech-tag">{tech}</span>
-                ))}
+
+              <div className="project-header">
+                <h3>{project.title}</h3>
+                <p className="project-subtitle">{project.subtitle}</p>
               </div>
-              <div className="project-links">
+
+              <p className="project-description">
+                {project.description}
+              </p>
+
+              <div className="project-tech-section">
+                <p className="project-tech-label">TECHNOLOGIES</p>
+
+                <div className="project-tech">
+                  {project.technologies.map((tech) => (
+                    <span className="tech-tag" key={tech}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="project-footer">
                 {project.github ? (
-                  <a href={project.github} className="project-link github-only">
-                    <FaGithub /> GitHub
+                  <a
+                    href={project.github}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
+                    <FaGithub aria-hidden="true" />
+                    View on GitHub
+                    <span aria-hidden="true">↗</span>
                   </a>
-                ) : null}
+                ) : (
+                  <span className="project-status">
+                    <span className="project-status-dot" />
+                    Project experience
+                  </span>
+                )}
               </div>
-              {project.notes && (
-                <p className="project-notes">{project.notes}</p>
-              )}
-            </div>
+            </article>
           ))}
         </div>
-        <p className="more-projects">More projects coming soon!</p>
+
+        <p className="more-projects">
+          More projects and explorations coming soon.
+        </p>
       </div>
     </section>
   );

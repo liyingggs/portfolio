@@ -1,105 +1,259 @@
-.certifications-title {
-  text-align: center;
-}
 .certifications {
+  --cert-ink: #17243b;
+  --cert-muted: #657187;
+  --cert-blue: #5276db;
+  --cert-border: #e3e8f1;
+  --cert-card: #ffffff;
+
   background: var(--primary-color);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.certifications-grid {
+.certifications .certifications-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.certifications .certifications-eyebrow {
+  margin-bottom: 12px;
+  color: var(--cert-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.certifications .certifications-title {
+  margin-bottom: 16px;
+  color: var(--cert-ink);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.certifications .certifications-title span {
+  color: var(--cert-blue);
+}
+
+.certifications .certifications-intro {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--cert-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+/* Responsive card grid */
+
+.certifications .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.1rem;
-  max-width: 900px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
-.cert-card {
-  background: var(--card-bg);
-  padding: 1rem 1.2rem;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  max-width: 100%;
+.certifications .cert-card {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid var(--cert-border);
+  border-radius: 12px;
+  background: var(--cert-card);
+  box-shadow: 0 8px 28px rgba(23, 36, 59, 0.04);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.cert-card:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.certifications .cert-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cert-blue);
+  box-shadow: 0 12px 30px rgba(23, 36, 59, 0.08);
 }
 
-.cert-card h3 {
-  color: var(--accent-color);
-  margin-bottom: 0.7rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-}
-.cert-title {
-  text-align: center;
+/* Card heading */
+
+.certifications .cert-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.cert-list {
+.certifications .cert-number {
+  color: var(--cert-blue);
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.certifications .cert-abbreviation {
+  color: var(--cert-muted);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.certifications .cert-title {
+  margin: 0 0 16px;
+  color: var(--cert-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Credential list */
+
+.certifications .cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.cert-list li {
-  padding: 0.4rem 0;
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  padding-left: 1.5rem;
+.certifications .cert-list li {
   position: relative;
-  line-height: 1.6;
+  padding-left: 20px;
+  color: var(--cert-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
-.cert-list li::before {
-  content: "✓";
+.certifications .cert-list li::before {
+  content: '';
   position: absolute;
+  top: 0.62em;
   left: 0;
-  color: var(--accent-color);
-  font-weight: bold;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--cert-blue);
 }
 
-.credly-container {
+/* Credly link */
+
+.certifications .credly-container {
   display: flex;
-  justify-content: center;
-  margin-top: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 38px;
+  text-align: center;
 }
 
-.credly-button {
+.certifications .credly-description {
+  margin: 0;
+  color: var(--cert-muted);
+  font-size: 0.9rem;
+}
+
+.certifications .credly-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  background: var(--accent-color);
-  color: white;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--cert-blue);
+  border-radius: 7px;
+  background: var(--cert-blue);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 650;
   text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.credly-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  background: #1a1a1a;
+.certifications .credly-button:hover {
+  transform: translateY(-2px);
+  background: #3f60bf;
+  box-shadow: 0 8px 20px rgba(82, 118, 219, 0.2);
 }
 
-.cert-list li:contains("✅")::before {
-  content: "✅";
+.certifications .credly-button:focus-visible {
+  outline: 3px solid var(--cert-blue);
+  outline-offset: 4px;
 }
 
-@media (max-width: 768px) {
-  .certifications-grid {
-    grid-template-columns: 1fr;
+/* Dark mode */
+
+.dark-mode .certifications {
+  --cert-ink: #edf2ff;
+  --cert-muted: #aebbd0;
+  --cert-blue: #8caaff;
+  --cert-border: #354156;
+  --cert-card: #202a3a;
+}
+
+.dark-mode .certifications .cert-card {
+  box-shadow: none;
+}
+
+.dark-mode .certifications .credly-button {
+  color: #17243b;
+}
+
+.dark-mode .certifications .credly-button:hover {
+  background: #a6bcff;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+  .certifications .certifications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
-  .cert-card {
-    padding: 1.5rem;
+  .certifications .cert-card {
+    padding: 21px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .certifications .certifications-heading {
+    margin-bottom: 30px;
+  }
+
+  .certifications .certifications-intro {
+    font-size: 0.96rem;
+  }
+
+  .certifications .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .certifications .cert-card {
+    padding: 22px;
+  }
+
+  .certifications .credly-container {
+    margin-top: 30px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .certifications .cert-card,
+  .certifications .credly-button {
+    transition: none;
+  }
+
+  .certifications .cert-card:hover,
+  .certifications .credly-button:hover {
+    transform: none;
   }
 }
