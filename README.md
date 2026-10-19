@@ -1,6 +1,6 @@
 # Ong Li Ying's Portfolio Website
 
-A modern, professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer and Cloud Enthusiast. This portfolio demonstrates my expertise in web development, cloud technologies, and software engineering practices.
+A motivated undergraduate in **Data Science & Business Analytics** with a strong foundation in programming, cloud computing, and interactive simulation. My portfolio highlights projects in **data analysis, visualization, and applied machine learning**, showcasing my ability to turn complex datasets into actionable insights. 
 
 ## Overview
 
