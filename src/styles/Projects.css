@@ -226,3 +226,23 @@
     padding: 23px;
   }
 }
+
+.projects .projects-eyebrow,
+.projects .projects-title,
+.projects .project-header h3 {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.projects .projects-intro,
+.projects .project-subtitle,
+.projects .project-description,
+.projects .project-number,
+.projects .project-type,
+.projects .project-label,
+.projects .project-highlights li,
+.projects .tech-tag,
+.projects .project-link,
+.projects .project-status,
+.projects .more-projects {
+  font-family: 'Inter', sans-serif;
+}
