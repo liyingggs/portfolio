@@ -1,10 +1,12 @@
 
+
 .contact {
   padding: 80px 0 45px;
   background: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
-  font-family: 'DM Sans', sans-serif;
 }
+
+/* CONTACT CARD */
 
 .contact-card {
   position: relative;
@@ -14,7 +16,7 @@
   overflow: hidden;
   background: var(--card-color);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: none;
 }
 
@@ -22,13 +24,13 @@
   display: none;
 }
 
+/* HEADING */
 
 .contact-eyebrow {
   display: block;
   margin-bottom: 14px;
   color: var(--accent-color);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-align: center;
@@ -37,10 +39,8 @@
 .contact-card h2 {
   margin: 0;
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(2.3rem, 5vw, 3.2rem);
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: clamp(2.3rem, 5vw, 3.3rem);
+  font-weight: 750;
   letter-spacing: -0.045em;
   text-align: center;
 }
@@ -50,57 +50,53 @@
 }
 
 .contact-subtitle {
-  max-width: 580px;
-  margin: 18px auto 36px;
+  max-width: 620px;
+  margin: 20px auto 34px;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.85;
   text-align: center;
 }
+
+/* OPPORTUNITIES */
 
 .contact-opportunities {
   text-align: center;
 }
 
 .contact-label {
-  margin: 0 0 16px;
+  margin: 0 0 15px;
   color: var(--text-primary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .cta-items {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 10px;
 }
 
 .cta-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 14px;
+  padding: 9px 16px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   background: transparent;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 550;
 }
 
+/* DIVIDER */
 
 .contact-divider {
   height: 1px;
-  margin: 34px 0 26px;
+  margin: 35px 0 27px;
   background: var(--border-color);
 }
+
+/* CONTACT FOOTER */
 
 .contact-footer {
   display: flex;
@@ -112,30 +108,27 @@
 .contact-footer-text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .contact-footer-title {
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-size: 0.97rem;
+  font-weight: 700;
 }
 
 .contact-footer-subtitle {
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 0.82rem;
   line-height: 1.6;
 }
 
+/* SOCIAL LINKS */
 
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 10px;
 }
 
 .contact-icon-btn {
@@ -143,17 +136,16 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  min-height: 40px;
-  padding: 0 13px;
+  min-height: 42px;
+  padding: 0 14px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   background: transparent;
   color: var(--text-primary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .contact-icon-btn:hover {
@@ -165,16 +157,16 @@
   font-size: 0.68rem;
 }
 
+/* BOTTOM NOTE */
 
 .contact-bottom-note {
-  margin: 26px 0 0;
+  margin: 27px 0 0;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 1.6;
+  font-size: 0.82rem;
   text-align: center;
 }
+
+/* DARK MODE */
 
 .dark-mode .contact-card {
   background: linear-gradient(
@@ -190,6 +182,7 @@
   display: none;
 }
 
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
   .contact {
@@ -200,46 +193,13 @@
     padding: 38px 23px;
   }
 
-  .contact-card h2 {
-    font-size: 2.25rem;
-  }
-
-  .contact-subtitle {
-    margin-bottom: 30px;
-  }
-
-  .cta-items {
-    gap: 8px;
-  }
-
-  .cta-badge {
-    font-size: 0.76rem;
-    padding: 7px 11px;
-  }
-
   .contact-footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
   }
 
   .contact-socials {
     justify-content: center;
-  }
-}
-
-@media (max-width: 400px) {
-  .contact-card {
-    padding: 32px 18px;
-  }
-
-  .contact-socials {
-    gap: 7px;
-  }
-
-  .contact-icon-btn {
-    padding: 0 10px;
-    font-size: 0.76rem;
   }
 }

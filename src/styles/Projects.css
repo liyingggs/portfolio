@@ -1,33 +1,27 @@
+
 .projects {
   background: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
-  font-family: 'DM Sans', sans-serif;
 }
-
-/* SECTION HEADING */
 
 .projects .projects-heading {
   max-width: 680px;
-  margin: 0 auto 48px;
+  margin: 0 auto 44px;
   text-align: center;
 }
 
 .projects .projects-eyebrow {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--accent-color);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
 }
 
 .projects .projects-title {
-  margin: 0 0 18px;
+  margin-bottom: 16px;
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(2.3rem, 5vw, 3.2rem);
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   letter-spacing: -0.045em;
 }
 
@@ -36,30 +30,24 @@
 }
 
 .projects .projects-intro {
-  max-width: 560px;
+  max-width: 570px;
   margin: 0 auto;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-/* ========================================
-   PROJECT GRID
-======================================== */
+/* PROJECT GRID */
 
 .projects .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
   gap: 22px;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
-/* ========================================
-   PROJECT CARDS
-======================================== */
+/* PROJECT CARDS */
 
 .projects .project-card {
   min-width: 0;
@@ -68,7 +56,7 @@
   padding: 27px;
   background: var(--card-color);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: none;
   transition: border-color 0.2s ease;
 }
@@ -79,21 +67,18 @@
   box-shadow: none;
 }
 
-/* CARD TOP */
-
 .projects .project-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 
 .projects .project-number {
   color: var(--accent-color);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
@@ -103,26 +88,21 @@
   border-radius: 5px;
   background: transparent;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.015em;
 }
 
-/* ========================================
-   PROJECT CONTENT
-======================================== */
+/* PROJECT CONTENT */
 
 .projects .project-header {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .projects .project-header h3 {
-  margin: 3px 0 0;
+  margin: 0 0 8px;
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.22rem;
+  font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.025em;
 }
@@ -130,58 +110,30 @@
 .projects .project-subtitle {
   margin: 0;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 600;
-  line-height: 1.5;
 }
 
 .projects .project-description {
-  margin: 0 0 26px;
+  flex: 1;
+  margin: 0 0 25px;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.75;
+  font-size: 0.92rem;
+  line-height: 1.8;
 }
 
-/* ========================================
-   PROJECT HIGHLIGHTS
-======================================== */
-
-.projects .project-highlights {
-  margin-bottom: 22px;
-}
-
-.projects .project-label {
-  margin: 0 0 13px;
-  color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.015em;
-}
-
-.projects .project-highlights ul {
-  margin: 0;
-  padding-left: 19px;
-}
-
-.projects .project-highlights li {
-  padding-left: 2px;
-  color: var(--text-primary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 400;
-  line-height: 1.55;
-}
-
-/* ========================================
-   TECHNOLOGY TAGS
-======================================== */
+/* TECHNOLOGY TAGS */
 
 .projects .project-tech-section {
   margin-top: auto;
+}
+
+.projects .project-tech-label {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
 }
 
 .projects .project-tech {
@@ -191,28 +143,22 @@
 }
 
 .projects .tech-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
+  padding: 7px 10px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   background: transparent;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 0.76rem;
+  line-height: 1.4;
 }
 
-/* ========================================
-   CARD FOOTER
-======================================== */
+/* CARD FOOTER */
 
 .projects .project-footer {
   display: flex;
   align-items: center;
-  margin-top: 22px;
-  padding-top: 17px;
+  margin-top: 24px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-color);
 }
 
@@ -221,9 +167,8 @@
   align-items: center;
   gap: 9px;
   color: var(--text-primary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 650;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -237,35 +182,24 @@
   align-items: center;
   gap: 8px;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.82rem;
 }
 
 .projects .project-status-dot {
   width: 7px;
   height: 7px;
-  flex-shrink: 0;
   border-radius: 50%;
   background: var(--accent-color);
 }
 
-/* ========================================
-   BOTTOM TEXT
-======================================== */
-
 .projects .more-projects {
   margin: 0;
   color: var(--text-secondary);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 400;
+  font-size: 0.9rem;
   text-align: center;
 }
 
-/* ========================================
-   DARK MODE
-======================================== */
+/* DARK MODE */
 
 .dark-mode .projects .project-card {
   background: linear-gradient(
@@ -281,43 +215,14 @@
   border-color: var(--accent-color);
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
-
-@media (max-width: 900px) {
-  .projects .projects-grid {
-    gap: 18px;
-  }
-
-  .projects .project-card {
-    padding: 23px;
-  }
-
-  .projects .project-header h3 {
-    font-size: 1.08rem;
-  }
-}
+/* RESPONSIVE */
 
 @media (max-width: 650px) {
-  .projects .projects-heading {
-    margin-bottom: 34px;
-  }
-
   .projects .projects-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .projects .project-card {
     padding: 23px;
-  }
-
-  .projects .project-card-top {
-    margin-bottom: 22px;
-  }
-
-  .projects .projects-title {
-    font-size: 2.25rem;
   }
 }
