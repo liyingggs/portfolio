@@ -2,7 +2,7 @@
 
 # Ong Li Ying's Portfolio Website
 
-A personal portfolio showcasing my background, technical skills, projects, and professional experience at the intersection of data, business, and technology.
+A motivated undergraduate in **Data Science & Business Analytics** with a strong foundation in programming, cloud computing, and interactive simulation. My portfolio highlights projects in **data analysis, visualization, and applied machine learning**, showcasing my ability to turn complex datasets into actionable insights. 
 
 ## Overview
 
