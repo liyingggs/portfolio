@@ -3,75 +3,90 @@ import React from 'react';
 import '../styles/About.css';
 
 const About = () => {
-  const highlights = [
+  const traits = [
     {
-      label: 'EDUCATION',
-      title: 'SIM-UOL',
-      description: 'Data Science & Business Analytics',
-      detail: '2026–2029 (Expected)',
+      number: '01',
+      title: 'Analytical',
+      description:
+        'I enjoy exploring information, spotting patterns, and turning findings into meaningful insights.',
+      tone: 'lilac',
+      symbol: '↗',
     },
     {
-      label: 'EXPERIENCE',
-      title: 'Business & IT',
-      description: 'City Developments Limited',
-      detail: 'The Capitol Kempinski Hotel Singapore',
+      number: '02',
+      title: 'Curious',
+      description:
+        'I like learning how things work and exploring how technology can solve everyday problems.',
+      tone: 'blue',
+      symbol: '✳',
     },
     {
-      label: 'INTERESTS',
-      title: 'Data & Technology',
-      description: 'Data Analytics & Business Analysis',
-      detail: 'Python · SQL · Cloud Computing',
+      number: '03',
+      title: 'Adaptable',
+      description:
+        'My experiences across IT and business have taught me to approach challenges from different perspectives.',
+      tone: 'sage',
+      symbol: '⌁',
     },
   ];
 
   return (
     <section id="about" className="about">
       <div className="container">
-        <div className="about-heading">
-          <p className="about-eyebrow">GET TO KNOW ME</p>
-          <h2 className="about-title">About <span>Me.</span></h2>
-          <p className="about-intro">
-            Bridging technology, data, and business to solve problems
-            and support smarter decisions.
-          </p>
-        </div>
-
-        <div className="about-content">
-          <div className="about-text">
-            <p>
-              I'm a first-year SIM-UOL undergraduate pursuing Data Science
-              & Business Analytics, with a Diploma in Information Technology
-              from Republic Polytechnic.
+        <div className="about-layout">
+          <div className="about-copy">
+            <p className="about-eyebrow">
+              A LITTLE INTRODUCTION <span>✳</span>
             </p>
 
-            <p>
-              Through my experience at City Developments Limited and
-              The Capitol Kempinski Hotel Singapore, I've gained exposure
-              to business operations, analysis, and enterprise IT.
+            <h2 className="about-title">
+              More than just<br />
+              <span>numbers & code.</span>
+            </h2>
+
+            <p className="about-lead">
+              I'm an aspiring data analyst pursuing a degree in Data Science & Business Analytics,
+              with experience in business operations & enterprise IT. 
             </p>
 
-            <p>
-              I'm interested in turning data into actionable insights
-              while exploring how technology can improve business processes.
+            <div className="about-description">
+              <p>
+               I would like to leverage technology and analytical thinking to enhance data utilization and facilitate effective decision-making. 
+              </p>
+            </div>
+          </div>
+
+          <div className="about-traits">
+            <div className="about-traits-heading">
+              <span>HOW I APPROACH THINGS</span>
+              <span className="about-sparkle">✳</span>
+            </div>
+
+            {traits.map((trait) => (
+              <article
+                className={`about-trait about-trait-${trait.tone}`}
+                key={trait.number}
+              >
+                <div className="about-trait-symbol" aria-hidden="true">
+                  {trait.symbol}
+                </div>
+
+                <div className="about-trait-content">
+                  <div className="about-trait-meta">
+                    <span>{trait.number}</span>
+                    <span>THE APPROACH</span>
+                  </div>
+
+                  <h3>{trait.title}</h3>
+                  <p>{trait.description}</p>
+                </div>
+              </article>
+            ))}
+
+            <p className="about-side-note">
+              A mix of perspectives, one curious mind.
             </p>
           </div>
-        </div>
-
-        <div className="about-highlights">
-          {highlights.map((item, index) => (
-            <div className="about-card" key={item.label}>
-              <div className="about-card-top">
-                <span>{item.label}</span>
-                <span className="about-card-number">
-                  0{index + 1}
-                </span>
-              </div>
-
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <span className="about-card-detail">{item.detail}</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>

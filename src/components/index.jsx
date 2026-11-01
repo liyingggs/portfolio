@@ -1,104 +1,94 @@
+
 import React from 'react';
-import { FaGithub, FaLinkedin, FaArrowDown, FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaArrowUpRightFromSquare,
+  FaArrowDown
+} from 'react-icons/fa6';
+
 import '../styles/Hero.css';
 
 const Index = () => {
   return (
-    <section id="index" className="hero">
-      <div className="hero-container">
+    <section id="index" className="intro-hero">
+      <div className="intro-hero-inner">
 
-        <div className="hero-content">
-          <p className="hero-eyebrow">
-            DATA SCIENCE & BUSINESS ANALYTICS
+        <div className="intro-copy">
+          <p className="intro-kicker">
+            <span></span>
+            HELLO, I'M LI YING
           </p>
 
           <h1>
-            Hi, I'm <span>Li Ying.</span>
+            Turning data
+            <br />
+            into <span>perspective.</span>
           </h1>
 
-          <h2 className="hero-heading">
-            Turning data into <span>meaningful insights.</span>
-          </h2>
-
-          <p className="hero-description">
-            First-year SIM-UOL undergraduate with an IT background,
-            interested in data analytics, business analysis, and
-            technology-driven solutions.
+          <p className="intro-description">
+            I'm a Data Science & Business Analytics undergraduate
+            with a background in Information Technology. I enjoy
+            exploring data, uncovering patterns, and understanding
+            how insights can support better decisions.
           </p>
 
-          <div className="hero-buttons">
-            <a href="#projects" className="hero-btn hero-btn-primary">
-              Explore My Work <FaArrowUpRightFromSquare />
+          <div className="intro-actions">
+            <a href="#projects" className="intro-button intro-button-primary">
+              Explore my work
+              <FaArrowUpRightFromSquare />
             </a>
 
-            <a href="#contact" className="hero-btn hero-btn-secondary">
-              Get In Touch
+            <a href="#contact" className="intro-button intro-button-secondary">
+              Get in touch
             </a>
           </div>
 
-          <div className="hero-socials">
-            <a
-              href="https://github.com/liyingggs"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub />
-              <span>GitHub</span>
+          <div className="intro-socials">
+            <a href="https://github.com/liyingggs" target="_blank" rel="noopener noreferrer">
+              <FaGithub /> GitHub
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/liyingongg/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-              <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/liyingongg/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin /> LinkedIn
             </a>
           </div>
         </div>
 
-        <div className="hero-visual">
-          <div className="hero-card">
-            <div className="hero-card-top">
-              <span className="hero-status-dot"></span>
-              <span>MY BACKGROUND</span>
-            </div>
+        <div className="intro-profile-card">
+          <div className="profile-card-heading">
+            <span> A LITTLE ABOUT ME </span>
+            <span>01 — 2026</span>
+          </div>
 
-            <div className="hero-initials">LY<span>.</span></div>
+          <div className="profile-card-monogram">
+            LY<span>.</span>
+          </div>
 
-            <p className="hero-card-caption">
-              Connecting technology, data, and business.
+          <div className="profile-card-info">
+            <p className="profile-card-name">Li Ying</p>
+            <p className="profile-card-degree">
+              BSc Data Science & Business Analytics
             </p>
+            <p className="profile-card-school">SIM — University of London</p>
+          </div>
 
-            <div className="hero-card-divider"></div>
+          <div className="profile-card-divider"></div>
 
-            <div className="hero-interests">
-              <span>01</span>
+          <div className="profile-card-interests">
+            <span>INTERESTED IN</span>
+            <div>
               <p>Data Analytics</p>
-            </div>
-
-            <div className="hero-interests">
-              <span>02</span>
-              <p>Business Analysis</p>
-            </div>
-
-            <div className="hero-interests">
-              <span>03</span>
+              <p>Business Insights</p>
               <p>Technology</p>
             </div>
           </div>
-
-          <div className="hero-decoration hero-decoration-one"></div>
-          <div className="hero-decoration hero-decoration-two"></div>
         </div>
 
       </div>
 
-      <a href="#about" className="hero-scroll">
-        <FaArrowDown />
-        <span>SCROLL TO EXPLORE</span>
+      <a href="#about" className="intro-scroll">
+        SCROLL TO EXPLORE <FaArrowDown />
       </a>
     </section>
   );

@@ -1,86 +1,87 @@
+
 import React from 'react';
-import { FaLinkedin, FaGithub, FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import {
+  FaLinkedin,
+  FaGithub,
+  FaArrowUpRightFromSquare,
+} from 'react-icons/fa6';
 import '../styles/Contact.css';
 
 const Contact = () => {
-  const opportunities = [
-    'Internships',
-    'Freelance Projects',
-    'Collaborations',
-  ];
-
   return (
     <section id="contact" className="contact">
       <div className="container">
         <div className="contact-card">
-          <span className="contact-eyebrow">
-            HAVE A PROJECT IN MIND?
-          </span>
+          <div className="contact-decoration contact-decoration-one" />
+          <div className="contact-decoration contact-decoration-two" />
 
-          <h2>Let's Connect<span>.</span></h2>
+          <div className="contact-content">
+            <p className="contact-eyebrow">
+              HAVE SOMETHING IN MIND? <span>✳</span>
+            </p>
 
-          <p className="contact-subtitle">
-            I'm always open to new opportunities, meaningful collaborations,
-            and connecting with people who enjoy turning ideas into reality.
-            Feel free to reach out!
-          </p>
+            <h2 className="contact-title">
+              Let's make<br />
+              <span>something happen.</span>
+            </h2>
 
-          <div className="contact-opportunities">
-            <p className="contact-label">I'm open to</p>
+            <p className="contact-subtitle">
+              Whether it's an opportunity, a collaboration, or simply
+              a conversation, I'd love to connect and hear from you.
+            </p>
 
-            <div className="cta-items">
-              {opportunities.map((item) => (
-                <span className="cta-badge" key={item}>
-                  {item}
+            <div className="contact-opportunities">
+              <span>Open to</span>
+              <div className="cta-items">
+                <span className="cta-badge">Internships</span>
+                <span className="cta-badge">Collaborations</span>
+                <span className="cta-badge">New opportunities</span>
+              </div>
+            </div>
+
+            <div className="contact-divider" />
+
+            <div className="contact-footer">
+              <div className="contact-footer-text">
+                <span className="contact-footer-title">
+                  Find me around the web
                 </span>
-              ))}
-            </div>
-          </div>
+                <span className="contact-footer-subtitle">
+                  Let's connect and keep in touch.
+                </span>
+              </div>
 
-          <div className="contact-divider" />
+              <div className="contact-socials">
+                <a
+                  href="https://www.linkedin.com/in/liyingongg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-icon-btn"
+                  aria-label="Visit my LinkedIn profile"
+                >
+                  <FaLinkedin />
+                  <span>LinkedIn</span>
+                  <FaArrowUpRightFromSquare className="contact-external-icon" />
+                </a>
 
-          <div className="contact-footer">
-            <div className="contact-footer-text">
-              <span className="contact-footer-title">
-                Let's start a conversation.
-              </span>
-              <span className="contact-footer-subtitle">
-                Find me on my professional and project profiles.
-              </span>
-            </div>
-
-            <div className="contact-socials">
-              <a
-                href="https://www.linkedin.com/in/liyingongg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-icon-btn"
-                aria-label="Visit my LinkedIn profile"
-                title="LinkedIn"
-              >
-                <FaLinkedin />
-                <span>LinkedIn</span>
-                <FaArrowUpRightFromSquare className="contact-external-icon" />
-              </a>
-
-              <a
-                href="https://github.com/liyingggs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-icon-btn"
-                aria-label="Visit my GitHub profile"
-                title="GitHub"
-              >
-                <FaGithub />
-                <span>GitHub</span>
-                <FaArrowUpRightFromSquare className="contact-external-icon" />
-              </a>
+                <a
+                  href="https://github.com/liyingggs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-icon-btn"
+                  aria-label="Visit my GitHub profile"
+                >
+                  <FaGithub />
+                  <span>GitHub</span>
+                  <FaArrowUpRightFromSquare className="contact-external-icon" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <p className="contact-bottom-note">
-          Thanks for stopping by — let's build something meaningful.
+          Made with curiosity and a little bit of creativity. ✳
         </p>
       </div>
     </section>

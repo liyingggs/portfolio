@@ -1,53 +1,73 @@
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  border: 2px solid var(--accent-color);
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: 600;
+
+* {
+  box-sizing: border-box;
 }
 
-.btn-primary {
-  background: var(--accent-color);
-  color: white;
-  border-color: var(--accent-color);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
-.btn-primary:hover {
-  background: white;
-  color: var(--accent-color);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+body {
+  margin: 0;
+  background: var(--primary-color);
+  color: var(--text-primary);
+  font-family: var(--font-body, 'Inter', sans-serif);
+  transition: background .25s ease, color .25s ease;
 }
 
-.btn-secondary {
-  background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--primary-color);
+  color: var(--text-primary);
 }
 
-.btn-secondary:hover {
-  background: var(--accent-color);
-  color: white;
-  transform: translateY(-2px);
+.container {
+  width: min(1120px, 88%);
+  margin: 0 auto;
 }
 
 section {
-  padding: 80px 0;
+  padding: clamp(65px, 8vw, 100px) 0;
   border-bottom: 1px solid var(--border-color);
   background: var(--primary-color);
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  transition: color .2s ease;
+}
+
+::selection {
+  background: var(--pastel-purple);
+  color: var(--text-primary);
+}
+
 @media (max-width: 768px) {
-  section {
-    padding: 60px 0;
+  .container {
+    width: calc(100% - 42px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
 }

@@ -1,259 +1,222 @@
-.certifications {
-  --cert-ink: #17243b;
-  --cert-muted: #657187;
-  --cert-blue: #5276db;
-  --cert-border: #e3e8f1;
-  --cert-card: #ffffff;
 
-  background: var(--primary-color);
+.certifications {
+  background: var(--secondary-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-.certifications .certifications-heading {
-  max-width: 680px;
-  margin: 0 auto 42px;
+.certifications-heading {
+  max-width: 690px;
+  margin: 0 auto 43px;
   text-align: center;
 }
 
-.certifications .certifications-eyebrow {
-  margin-bottom: 12px;
-  color: var(--cert-blue);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+.certifications-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 15px;
+  color: var(--accent-color);
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .16em;
 }
 
-.certifications .certifications-title {
-  margin-bottom: 16px;
-  color: var(--cert-ink);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  letter-spacing: -0.045em;
-  line-height: 1.2;
+.certifications-title {
+  margin: 0 0 15px;
+  color: var(--text-primary);
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -.055em;
 }
 
-.certifications .certifications-title span {
-  color: var(--cert-blue);
+.certifications-title span {
+  color: var(--accent-color);
 }
 
-.certifications .certifications-intro {
+.certifications-intro {
   max-width: 570px;
   margin: 0 auto;
-  color: var(--cert-muted);
-  font-size: 1.02rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
   line-height: 1.8;
 }
 
-/* Responsive card grid */
-
-.certifications .certifications-grid {
+.certifications-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 18px;
-  max-width: 1050px;
-  margin: 0 auto;
+  gap: 17px;
 }
 
-.certifications .cert-card {
+.cert-card {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 23px;
-  border: 1px solid var(--cert-border);
-  border-radius: 12px;
-  background: var(--cert-card);
-  box-shadow: 0 8px 28px rgba(23, 36, 59, 0.04);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 19px;
+  background: var(--card-color);
+  box-shadow: 0 8px 26px var(--shadow-color);
+  transition: transform .22s ease, box-shadow .22s ease;
 }
 
-.certifications .cert-card:hover {
+.cert-card:hover {
   transform: translateY(-4px);
-  border-color: var(--cert-blue);
-  box-shadow: 0 12px 30px rgba(23, 36, 59, 0.08);
+  box-shadow: 0 14px 32px var(--shadow-color);
 }
 
-/* Card heading */
-
-.certifications .cert-card-top {
+.cert-card-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
-.certifications .cert-number {
-  color: var(--cert-blue);
-  font-size: 0.8rem;
+.cert-number {
+  color: var(--accent-color);
+  font-size: .85rem;
   font-weight: 750;
-  letter-spacing: 0.08em;
+  letter-spacing: .1em;
 }
 
-.certifications .cert-abbreviation {
-  color: var(--cert-muted);
-  font-size: 0.7rem;
+.cert-abbreviation {
+  padding: 7px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: var(--text-secondary);
+  font-size: .65rem;
   font-weight: 750;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
 }
 
-.certifications .cert-title {
-  margin: 0 0 16px;
-  color: var(--cert-ink);
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-/* Credential list */
-
-.certifications .cert-list {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
+.cert-title {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
-.certifications .cert-list li {
-  position: relative;
-  padding-left: 20px;
-  color: var(--cert-muted);
-  font-size: 0.85rem;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
+.cert-card-divider {
+  height: 1px;
+  margin: 17px 0;
+  background: var(--border-color);
 }
 
-.certifications .cert-list li::before {
-  content: '';
-  position: absolute;
-  top: 0.62em;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 2px;
-  background: var(--cert-blue);
-}
-
-/* Credly link */
-
-.certifications .credly-container {
+.cert-list {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  margin: 0 0 22px;
+  padding-left: 18px;
+}
+
+.cert-list li {
+  padding-left: 3px;
+  color: var(--text-secondary);
+  font-size: .82rem;
+  line-height: 1.65;
+}
+
+.cert-list li::marker {
+  color: var(--accent-color);
+}
+
+.cert-count {
+  margin-top: auto;
+  color: var(--accent-color);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.credly-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 27px;
+  padding: 22px 25px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--primary-color);
+}
+
+.credly-text {
+  display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 38px;
-  text-align: center;
 }
 
-.certifications .credly-description {
+.credly-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--soft-accent);
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.credly-text h3 {
+  margin: 0 0 4px;
+  color: var(--text-primary);
+  font-size: .95rem;
+}
+
+.credly-text p {
   margin: 0;
-  color: var(--cert-muted);
-  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-size: .8rem;
+  line-height: 1.5;
 }
 
-.certifications .credly-button {
+.credly-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 12px 18px;
-  border: 1px solid var(--cert-blue);
-  border-radius: 7px;
-  background: var(--cert-blue);
-  color: #ffffff;
-  font-size: 0.88rem;
+  flex-shrink: 0;
+  padding: 11px 17px;
+  border: 1px solid var(--accent-color);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-size: .8rem;
   font-weight: 650;
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background .2s ease, color .2s ease;
 }
 
-.certifications .credly-button:hover {
-  transform: translateY(-2px);
-  background: #3f60bf;
-  box-shadow: 0 8px 20px rgba(82, 118, 219, 0.2);
+.credly-button:hover {
+  background: var(--accent-color);
+  color: #fff;
 }
 
-.certifications .credly-button:focus-visible {
-  outline: 3px solid var(--cert-blue);
-  outline-offset: 4px;
-}
-
-/* Dark mode */
-
-.dark-mode .certifications {
-  --cert-ink: #edf2ff;
-  --cert-muted: #aebbd0;
-  --cert-blue: #8caaff;
-  --cert-border: #354156;
-  --cert-card: #202a3a;
-}
-
-.dark-mode .certifications .cert-card {
-  box-shadow: none;
-}
-
-.dark-mode .certifications .credly-button {
-  color: #17243b;
-}
-
-.dark-mode .certifications .credly-button:hover {
-  background: #a6bcff;
-}
-
-/* Tablet */
-
-@media (max-width: 950px) {
-  .certifications .certifications-grid {
+@media (max-width: 850px) {
+  .certifications-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .certifications .cert-card {
-    padding: 21px;
   }
 }
-
-/* Mobile */
 
 @media (max-width: 600px) {
-  .certifications .certifications-heading {
-    margin-bottom: 30px;
-  }
-
-  .certifications .certifications-intro {
-    font-size: 0.96rem;
-  }
-
-  .certifications .certifications-grid {
+  .certifications-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
   }
 
-  .certifications .cert-card {
-    padding: 22px;
+  .credly-container {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .certifications .credly-container {
-    margin-top: 30px;
+  .credly-button {
+    width: 100%;
   }
 }
 
-/* Accessibility */
-
 @media (prefers-reduced-motion: reduce) {
-  .certifications .cert-card,
-  .certifications .credly-button {
+  .cert-card {
     transition: none;
-  }
-
-  .certifications .cert-card:hover,
-  .certifications .credly-button:hover {
-    transform: none;
   }
 }

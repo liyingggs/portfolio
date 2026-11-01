@@ -1,78 +1,62 @@
 .contact {
-  --contact-ink: #17243b;
-  --contact-muted: #657187;
-  --contact-blue: #5276db;
-  --contact-border: #e3e8f1;
-  --contact-card: #ffffff;
-  --contact-soft: #f5f7fc;
-
-  padding: 90px 0 45px;
+  padding: 80px 0 45px;
   background: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
 }
+
+/* CONTACT CARD */
 
 .contact-card {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 55px 60px 35px;
+  padding: 48px 50px;
   overflow: hidden;
-  background: var(--contact-card);
-  border: 1px solid var(--contact-border);
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(23, 36, 59, 0.06);
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: none;
 }
 
-/* Subtle decorative accent */
 .contact-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--contact-blue),
-    #8ba8ff,
-    #c5d3ff
-  );
+  display: none;
 }
+
+/* HEADING */
 
 .contact-eyebrow {
   display: block;
   margin-bottom: 14px;
-  color: var(--contact-blue);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  color: var(--accent-color);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-align: center;
 }
 
 .contact-card h2 {
   margin: 0;
-  color: var(--contact-ink);
+  color: var(--text-primary);
   font-size: clamp(2.3rem, 5vw, 3.3rem);
-  font-weight: 800;
-  line-height: 1.15;
+  font-weight: 750;
   letter-spacing: -0.045em;
   text-align: center;
 }
 
 .contact-card h2 span {
-  color: var(--contact-blue);
+  color: var(--accent-color);
 }
 
 .contact-subtitle {
   max-width: 620px;
   margin: 20px auto 34px;
-  color: var(--contact-muted);
-  font-size: 1.04rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
   line-height: 1.85;
   text-align: center;
 }
 
-/* Opportunities */
+/* OPPORTUNITIES */
 
 .contact-opportunities {
   text-align: center;
@@ -80,7 +64,7 @@
 
 .contact-label {
   margin: 0 0 15px;
-  color: var(--contact-ink);
+  color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -93,36 +77,24 @@
 }
 
 .cta-badge {
-  display: inline-flex;
-  align-items: center;
   padding: 9px 16px;
-  border: 1px solid var(--contact-border);
-  border-radius: 999px;
-  background: var(--contact-soft);
-  color: var(--contact-ink);
-  font-size: 0.87rem;
-  font-weight: 600;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease,
-    transform 0.2s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 550;
 }
 
-.cta-badge:hover {
-  transform: translateY(-2px);
-  border-color: var(--contact-blue);
-  background: rgba(82, 118, 219, 0.1);
-}
-
-/* Divider */
+/* DIVIDER */
 
 .contact-divider {
   height: 1px;
   margin: 35px 0 27px;
-  background: var(--contact-border);
+  background: var(--border-color);
 }
 
-/* Bottom row */
+/* CONTACT FOOTER */
 
 .contact-footer {
   display: flex;
@@ -138,16 +110,18 @@
 }
 
 .contact-footer-title {
-  color: var(--contact-ink);
+  color: var(--text-primary);
   font-size: 0.97rem;
   font-weight: 700;
 }
 
 .contact-footer-subtitle {
-  color: var(--contact-muted);
+  color: var(--text-secondary);
   font-size: 0.82rem;
   line-height: 1.6;
 }
+
+/* SOCIAL LINKS */
 
 .contact-socials {
   display: flex;
@@ -162,38 +136,26 @@
   gap: 9px;
   min-height: 42px;
   padding: 0 14px;
-  border: 1px solid var(--contact-border);
-  border-radius: 10px;
-  background: var(--contact-card);
-  color: var(--contact-ink);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-primary);
   font-size: 0.85rem;
-  font-weight: 650;
+  font-weight: 600;
   text-decoration: none;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .contact-icon-btn:hover {
-  transform: translateY(-2px);
-  border-color: var(--contact-blue);
-  background: var(--contact-blue);
-  color: #ffffff;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .contact-external-icon {
   font-size: 0.68rem;
-  opacity: 0.7;
 }
 
-.contact-icon-btn:focus-visible {
-  outline: 3px solid var(--contact-blue);
-  outline-offset: 4px;
-}
-
-/* Closing note */
+/* BOTTOM NOTE */
 
 .contact-bottom-note {
   margin: 27px 0 0;
@@ -202,104 +164,40 @@
   text-align: center;
 }
 
-/* ==============================
-   Dark Mode
-================================= */
-
-.dark-mode .contact {
-  --contact-ink: #edf2ff;
-  --contact-muted: #aebbd0;
-  --contact-blue: #8caaff;
-  --contact-border: #354156;
-  --contact-card: #202a3a;
-  --contact-soft: #283449;
-}
+/* DARK MODE */
 
 .dark-mode .contact-card {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(
+    145deg,
+    #393143 0%,
+    #302c3a 55%,
+    #292b3a 100%
+  );
+  border-color: #494052;
 }
 
-.dark-mode .contact-badge,
-.dark-mode .cta-badge {
-  color: var(--contact-ink);
+.dark-mode .contact-card::before {
+  display: none;
 }
 
-/* ==============================
-   Responsive Layout
-================================= */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
   .contact {
-    padding: 65px 0 35px;
+    padding: 60px 0 35px;
   }
 
   .contact-card {
-    padding: 42px 25px 28px;
-    border-radius: 18px;
-  }
-
-  .contact-subtitle {
-    margin: 17px auto 28px;
-    font-size: 0.96rem;
-    line-height: 1.75;
-  }
-
-  .contact-divider {
-    margin: 28px 0 22px;
+    padding: 38px 23px;
   }
 
   .contact-footer {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     text-align: center;
   }
 
   .contact-socials {
     justify-content: center;
-  }
-
-  .contact-icon-btn {
-    flex: 1;
-  }
-}
-
-@media (max-width: 420px) {
-  .contact-card {
-    padding: 38px 18px 24px;
-  }
-
-  .contact-card h2 {
-    font-size: 2.15rem;
-  }
-
-  .cta-items {
-    gap: 8px;
-  }
-
-  .cta-badge {
-    padding: 8px 12px;
-    font-size: 0.8rem;
-  }
-
-  .contact-socials {
-    flex-direction: column;
-  }
-
-  .contact-icon-btn {
-    width: 100%;
-  }
-}
-
-/* Respect reduced-motion preferences */
-
-@media (prefers-reduced-motion: reduce) {
-  .contact-icon-btn,
-  .cta-badge {
-    transition: none;
-  }
-
-  .contact-icon-btn:hover,
-  .cta-badge:hover {
-    transform: none;
   }
 }

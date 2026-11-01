@@ -1,3 +1,112 @@
+:root {
+  /* Light theme */
+  --primary-color: #F8F6F8;
+  --secondary-color: #FFFFFF;
+  --accent-color: #9B83B5;
+  --accent-hover: #82699F;
+
+  --text-primary: #34313A;
+  --text-secondary: #77717E;
+  --border-color: #E9E3EB;
+
+  --card-color: #FFFFFF;
+  --soft-accent: #EEE8F3;
+  --shadow-color: rgba(65, 48, 75, 0.07);
+
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --section-spacing: 100px;
+  --content-width: 1180px;
+}
+
+/* Dark theme */
+
+:root {
+  /* Light mode */
+  --primary-color: #F8F7F4;
+  --secondary-color: #FFFFFF;
+  --accent-color: #B8A2CA;
+  --accent-hover: #9D83B5;
+
+  --text-primary: #29272D;
+  --text-secondary: #716B73;
+  --border-color: #E9E2E5;
+
+  --card-color: #FFFFFF;
+  --soft-accent: #EEE8F1;
+  --shadow-color: rgba(65, 48, 75, 0.07);
+
+  /* Pastel accents */
+  --pastel-pink: #E8C9D2;
+  --pastel-purple: #D8CBE6;
+  --pastel-beige: #E9DDCA;
+  --pastel-sage: #C7D5C2;
+  --pastel-blue: #C9DDED;
+
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.dark-mode {
+  --primary-color: #24232B;
+  --secondary-color: #302D38;
+  --accent-color: #C4AED8;
+  --accent-hover: #D8C8E6;
+
+  --text-primary: #F5F0F3;
+  --text-secondary: #C0B7C3;
+  --border-color: #46404B;
+
+  --card-color: #302D38;
+  --soft-accent: #403746;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+
+  --pastel-pink: #70515F;
+  --pastel-purple: #594B69;
+  --pastel-beige: #655744;
+  --pastel-sage: #455748;
+  --pastel-blue: #40596D;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  background: var(--primary-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+::selection {
+  background: #E4D8ED;
+  color: #40334D;
+}
+
 .hero {
   --hero-ink: #17243b;
   --hero-muted: #657187;

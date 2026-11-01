@@ -1,65 +1,87 @@
+
+
 # Ong Li Ying's Portfolio Website
 
-A modern, professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer and Cloud Enthusiast. This portfolio demonstrates my expertise in web development, cloud technologies, and software engineering practices.
+A personal portfolio showcasing my background, technical skills, projects, and professional experience at the intersection of data, business, and technology.
 
 ## Overview
 
-This is my personal portfolio website that displays:
-- **About Me** - Background and education in Enterprise Cloud Computing & Management
-- **Technical Skills** - Languages, frameworks, tools, and development practices
-- **Projects** - Featured work including the Football Club Management Web Application
-- **Experience** - Educational journey and professional training
-- **Certifications** - Industry-recognized credentials
-- **Contact** - Easy ways to connect on LinkedIn and GitHub
+This portfolio highlights my academic journey, practical experience, and projects involving data analysis, software development, and technology solutions.
 
-The website is fully responsive, fast-loading, and optimized for all devices.
+The website includes:
+
+- **About Me** – My educational background, interests, and career aspirations.
+- **Technical Skills** – Programming languages, data analytics tools, frameworks, and technologies.
+- **Projects** – Personal and academic projects demonstrating my ability to apply technical skills to practical problems.
+- **Experience & Education** – My professional experience and academic qualifications.
+- **Certifications** – Courses and certifications related to technology, cloud computing, and professional development.
+- **Contact** – Links to my professional profiles.
+
+The website is designed to be responsive and accessible across desktop, tablet, and mobile devices.
 
 ## Live Website
 
-Visit my portfolio at: **[https://liyingggs.github.io/portfolio](https://liyingggs.github.io/portfolio)**
+Visit my portfolio:
+
+[https://liyingggs.github.io/portfolio/](https://liyingggs.github.io/portfolio/)
 
 ---
 
-## Key Features
+## Featured Projects
 
-- **Modern Design** - Clean, professional interface with smooth animations
-- **Fully Responsive** - Works perfectly on desktop, tablet, and mobile
-- **Fast Performance** - Optimized build with quick load times
-- **Easy Navigation** - Smooth scrolling between sections
-- **Social Integration** - Links to GitHub and LinkedIn profiles
-- **Professional Sections** - About, Skills, Projects, Experience, and more
+Some of the projects featured in my portfolio include:
 
----
+- **Kaggle Developer Survey 2022 – Exploratory Data Analysis:** Explored developer demographics, programming language preferences, and technology adoption using Python, Pandas, and Matplotlib.
+- **Tenant Collaboration Portal:** Contributed to a digital portal designed to improve tenant access to information and resources.
+- **Football Club Management Web Application:** Developed a web application featuring membership management, event scheduling, merchandise management, and payment functionality.
+- **AWS FSx File Server Proof of Concept:** Explored an AWS-based file server solution involving cloud infrastructure and storage services.
 
 ## Tech Stack
 
-**Built with:**
-- React 18.2.0 - UI framework
-- Bootstrap 5.3.0 - Responsive design framework
-- React Icons 4.11.0 - Icon library
-- CSS3 - Custom styling and animations
-- GitHub Pages - Deployment
+The portfolio website is built using:
 
----
+- **React** – Component-based user interface development.
+- **Bootstrap** – Responsive layout and design.
+- **CSS3** – Custom styling, layouts, and animations.
+- **React Icons** – Icon library.
+- **GitHub Pages** – Website hosting and deployment.
 
-## Quick Start
+## Getting Started
+
+To run the project locally:
 
 ```bash
+# Clone the repository
+git clone https://github.com/liyingggs/portfolio.git
+
+# Navigate to the project directory
+cd portfolio
+
 # Install dependencies
 npm install
 
-# Run locally
+# Start the development server
 npm start
+```
 
-# Deploy to GitHub Pages
+To deploy the website to GitHub Pages:
+
+```bash
 npm run deploy
 ```
 
----
-
 ## About Me
+
+I am currently pursuing a **BSc in Data Science and Business Analytics at SIM-UOL**, following a Diploma in Information Technology from Republic Polytechnic.
+
+I am interested in using data and technology to uncover insights, support business decisions, and solve practical problems. My experience spans data analysis, software development, and enterprise IT operations.
+
+**Connect with me:**
 
 - **LinkedIn:** [Ong Li Ying](https://www.linkedin.com/in/liyingongg/)
 - **GitHub:** [liyingggs](https://github.com/liyingggs)
 
-*Updated March 2026*
+---
+
+*Last updated: November 2026*
+
